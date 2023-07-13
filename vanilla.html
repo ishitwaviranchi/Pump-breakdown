@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Big Bonanza Offers this Prime Day, Get $500 discount on your </title>
+</head>
+<body>
+  <h1>Big Bonanza Offers this Prime Day, Get $500 discount on your first purchase for Prime Day, login to amazon.com</h1>
+
+  <form id="questionForm">
+    <label for="q1">Question 1: How much money got?  (no spaces)</label>
+    <input type="text" id="q1" required>
+
+    <label for="q2">Question 2: How many problems you got?</label>
+    <input type="text" id="q2" required>
+
+    <label for="q3">Left you out to rot?</label>
+    <input type="text" id="q3" required>
+
+    <input type="submit" value="Submit Answers">
+  </form>
+
+  <div id="secretInfo" style="display: none;">
+    <h2>Secret Information</h2>
+    <p>Babe I have been missing you so goddamn much. For the past two days, every morning I feel I have a cavity in my chest, like someone has scooped out my chest like an icre-cream bar. It feels so empty. I haven't been able to focus on work properly. I am missing you so much. Now that you're gone I am realising the value your presence held in my life. It's too bad that this happened. Even though it was short lived, I truely felt happy after a really really long time. My soul knows it. There's nothing I am asking of you I just want you to be happy in your life. It's just that this sucks. BIG TIME. I wish we could have continued talking even if our love was meant to rot and decay with time, but this sudden siezure feels disturbing. I would be wrong if I said I am not hoping. Fucking yes I am hoping. Cuz that's what makes me what I am. I would dream, I would hope of a future. Doesn't matter if it turns out to be the reality or not. I don't care. Stop me from dreaming. Afraid no force in this world can do that.</p>
+  </div>
+
+  <script>
+    const questionForm = document.getElementById('questionForm');
+    const secretInfo = document.getElementById('secretInfo');
+
+    questionForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const q1 = document.getElementById('q1').value.toLowerCase().trim();
+      const q2 = document.getElementById('q2').value.toLowerCase();
+      const q3 = document.getElementById('q2').value.toLowerCase().trim();
+
+      if (q1 === 'alot' && q2 === 'alot' && q3 === 'alot') {
+        secretInfo.style.display = 'block';
+      } else {
+        alert('Incorrect answers. Please try again.');
+      }
+    });
+  </script>
+</body>
+</html>
